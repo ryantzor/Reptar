@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Reptar</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_to_prehistoric">Welcome to Reptar: The Prehistoric Simulator</string>
+    <string name="load_previous_simulation">&quot;Load Previous&quot;</string>
+    <string name="new_sim">New Simulation</string>
+
+</resources>
