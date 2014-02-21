@@ -6,5 +6,11 @@
     <string name="welcome_to_prehistoric">Welcome to Reptar: The Prehistoric Simulator</string>
     <string name="load_previous_simulation">&quot;Load Previous&quot;</string>
     <string name="new_sim">New Simulation</string>
+    <string name="are_you_sure">Are you sure you want to delete the previous simulation?</string>
+    <string name="warning">Warning!</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_simulation">Simulation</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
