@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".InitialConditions" >
+
+    <TextView
+        android:id="@+id/tvEnvironmentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/environment" />
+
+    <Spinner
+        android:id="@+id/spinnerEvironmentTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvEnvironmentLabel" />
+
+    <Spinner
+        android:id="@+id/spinnerGrowthLevels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerEvironmentTypes"
+        android:layout_below="@+id/spinnerEvironmentTypes" />
+
+    <TextView
+        android:id="@+id/tvGrowthLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvEnvironmentLabel"
+        android:layout_alignTop="@+id/spinnerGrowthLevels"
+        android:layout_marginTop="16dp"
+        android:text="@string/growth_rate" />
+
+    <EditText
+        android:id="@+id/etTrexCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTrexLabel"
+        android:layout_alignLeft="@+id/etHumanCount"
+        android:layout_alignRight="@+id/etHumanCount"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvPterodactylLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvEnvironmentLabel"
+        android:layout_below="@+id/tvAmountOfAnimalHeader"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/pterodactyl" />
+
+    <EditText
+        android:id="@+id/etPterodactylCount"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAmountOfAnimalHeader"
+        android:layout_toRightOf="@+id/tvPterodactylLabel"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etHumanCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPterodactylCount"
+        android:layout_alignRight="@+id/etPterodactylCount"
+        android:layout_below="@+id/etPterodactylCount"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvTrexLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvHumanLabel"
+        android:layout_below="@+id/etHumanCount"
+        android:layout_marginTop="18dp"
+        android:text="@string/t_rex" />
+
+    <TextView
+        android:id="@+id/tvHumanLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etTrexCount"
+        android:layout_alignLeft="@+id/tvGrowthLevelLabel"
+        android:text="@string/humans" />
+
+    <TextView
+        android:id="@+id/tvAmountOfAnimalHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerGrowthLevels"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/amount_of_animals"
+        android:textSize="@dimen/activity_horizontal_margin" />
+
+</RelativeLayout>
