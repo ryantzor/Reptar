@@ -18,18 +18,6 @@ public class MainActivity extends Activity {
     
         
         
-        Button newSimulationButton = (Button) findViewById(R.id.btnNewSim);
-        newSimulationButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				//send to initial conditions page
-				Intent intent = new Intent(MainActivity.this, InitialConditions.class);
-				startActivity(intent);
-				
-			}
-		});
-        
         
     	Button loadPreviousButton = (Button) findViewById(R.id.btnLoadPreviousSim);
     	loadPreviousButton.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +52,24 @@ public class MainActivity extends Activity {
 			    dialog.show();
 			}
 		});
- 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
     }
 
