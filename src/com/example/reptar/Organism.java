@@ -12,8 +12,6 @@ public class Organism {
 	double foodSource;
 	
 	
-	
-	
 	public Organism()
 	{
 		isAlive = true;
