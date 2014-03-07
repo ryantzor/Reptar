@@ -12,6 +12,11 @@ public class Organism {
 	double foodSource;
 	
 	
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 5c181da2820770bb2aeff336c93f1afd76d83129
 	public Organism()
 	{
 		isAlive = true;
