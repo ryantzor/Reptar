@@ -18,17 +18,14 @@
     <string name="pterodactyl">pterodactyl</string>
     <string name="t_rex">T-Rex</string>
     <string name="amount_of_animals">Amount of Animals:</string>
-<<<<<<< HEAD
-
-=======
     
->>>>>>> defa3c038d06277e7f1839445e1bb4e422219a37
+
     <string-array name="environments_array">
         <item>Grasslands</item>
         <item>Wetland</item>
         <item>Forest</item>
     </string-array>
-<<<<<<< HEAD
+
     <string-array name="growth_levels">
         <item>slow</item>
         <item>medium</item>
@@ -36,8 +33,6 @@
     </string-array>
 
     <string name="title_activity_splash_screen">SplashScreen</string>
-=======
->>>>>>> defa3c038d06277e7f1839445e1bb4e422219a37
 
 	<string-array name="growth_levels">
         <item>slow</item>
