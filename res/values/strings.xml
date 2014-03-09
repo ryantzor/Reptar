@@ -34,11 +34,7 @@
 
     <string name="title_activity_splash_screen">SplashScreen</string>
 
-	<string-array name="growth_levels">
-        <item>slow</item>
-        <item>medium</item>
-        <item>fast</item>
-    </string-array>
+
     
 	
 </resources>
