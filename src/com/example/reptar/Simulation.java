@@ -10,7 +10,27 @@ public class Simulation extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_simulation);
+		SimulatorStart simulatorInstance = new SimulatorStart();
+		simulatorInstance.run();
 	}
+	  public class SimulatorStart extends Thread 
+	{
+		    
+		  public void run()
+		  {
+			  while(true)
+			  {
+				  
+			  }
+		   
+		  }
+		  
+		  public void instantiateSimulator()
+		  {
+			  
+		  }
+	}
+	 
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -18,5 +38,7 @@ public class Simulation extends Activity {
 		getMenuInflater().inflate(R.menu.simulation, menu);
 		return true;
 	}
+	 
+	
 
 }
