@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class System {
 	Date Time;
-	Comparator<Event> comparator; //= new somthing;
+	Comparator<Event> comparator; //= new something;
 	PriorityQueue<Event> queue; //= new PriorityQueue<Event>(10, comparator);
 	
 	/* System Constructor
@@ -18,6 +18,10 @@ public class System {
 		
 	}
 	
+	
+	/* Check all the exit conditions and returns false 
+	 * if simulation should stop.
+	 */
 	private boolean ExitCondistions(){
 		
 		return true;
