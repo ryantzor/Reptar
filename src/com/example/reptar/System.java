@@ -5,7 +5,8 @@ import java.util.PriorityQueue;
 import java.util.Date;
 
 public class System {
-	Date Time;
+	Date RealTime;
+	SimulationDate SimTime;
 	Comparator<Event> comparator; //= new something;
 	PriorityQueue<Event> queue; //= new PriorityQueue<Event>(10, comparator);
 	
