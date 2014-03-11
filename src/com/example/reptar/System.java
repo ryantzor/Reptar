@@ -5,9 +5,11 @@ import java.util.PriorityQueue;
 import java.util.Date;
 
 public class System {
-	int stop = 2620800;
+	int stopTime = 2620800;
+	boolean stopNow = false;
 	Date RealTime;
-	SimulationDate SimTime;
+	
+	SimulationDate simTime;
 	Comparator<Event> comparator; //= new something;
 	PriorityQueue<Event> queue; //= new PriorityQueue<Event>(10, comparator);
 	
@@ -27,13 +29,14 @@ public class System {
 	 * Runs the event.
 	 */
 	void start() {
-		Event currentEvent = new Event();
+		Event currentEvent;// = new Event();
 		while (Continue()){
 			currentEvent = queue.poll();
 			if(currentEvent != null) {
-				
+				simTime = currentEvent.getTime();
+				currentEvent.Happen();
 			}else {
-				
+				stopNow = true;
 			}
 		}
 		
@@ -44,7 +47,8 @@ public class System {
 	 * if simulation should stop.
 	 */
 	private boolean Continue(){
-		if (SimTime.getTime() > stop ) return false;
+		if (simTime.getTime() > stopTime ) return false;
+		if (stopNow) return false;
 		
 		return true;
 	}
