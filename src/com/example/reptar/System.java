@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Date;
 
 public class System {
+	int stop = 2620800;
 	Date RealTime;
 	SimulationDate SimTime;
 	Comparator<Event> comparator; //= new something;
@@ -19,11 +20,31 @@ public class System {
 		
 	}
 	
+	/* Starts the simulation
+	 * Loops while Continue() is True
+	 * gets next event form queue
+	 * set simTime to time of new event
+	 * Runs the event.
+	 */
+	void start() {
+		Event currentEvent = new Event();
+		while (Continue()){
+			currentEvent = queue.poll();
+			if(currentEvent != null) {
+				
+			}else {
+				
+			}
+		}
+		
+	}
+	
 	
 	/* Check all the exit conditions and returns false 
 	 * if simulation should stop.
 	 */
-	private boolean ExitCondistions(){
+	private boolean Continue(){
+		if (SimTime.getTime() > stop ) return false;
 		
 		return true;
 	}
