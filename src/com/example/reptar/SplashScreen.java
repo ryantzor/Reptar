@@ -20,7 +20,7 @@ public class SplashScreen extends Activity {
 		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 		//this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		
-		zeldaTitleSong = MediaPlayer.create(SplashScreen.this, R.raw.ootthemesplash);
+		zeldaTitleSong = MediaPlayer.create(SplashScreen.this, R.raw.oot_theme_splash);
 		zeldaTitleSong.start();
 		
 		Thread thread = new Thread(){
