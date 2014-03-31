@@ -9,8 +9,9 @@ public class Organism {
 	double growthRate;
 	double terrainAdaptability;
 	double threatLevel;
-	double foodSource;
-
+	String typeOfFood;
+	
+	
 	public Organism()
 	{
 		isAlive = true;
@@ -19,7 +20,7 @@ public class Organism {
 		
 		terrainAdaptability = 100.0;
 		threatLevel = 100.0;
-		foodSource = 100.0;
+		
 	
 	}
 

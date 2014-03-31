@@ -7,5 +7,6 @@ public class Stegosaurus extends Organism {
 		//Magic numbers
 		this.threatLevel = 10;
 		this.terrainAdaptability = 20;
+		this.typeOfFood = "Herbivore";
 	}
 }

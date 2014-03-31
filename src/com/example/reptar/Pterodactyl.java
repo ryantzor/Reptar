@@ -8,6 +8,8 @@ public class Pterodactyl extends Organism{
 		//Magic numbers
 		this.terrainAdaptability = 50;
 		this.threatLevel = 60;
+		this.typeOfFood = "Omnivore";
+		
 	}
 	
 }

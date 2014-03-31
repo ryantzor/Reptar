@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
@@ -16,12 +17,20 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     
-        
-        
-        
-    	Button loadPreviousButton = (Button) findViewById(R.id.btnLoadPreviousSim);
-    	loadPreviousButton.setOnClickListener(new View.OnClickListener() {
-			
+        Button btnNewSimulation = (Button) findViewById(R.id.btnNewSim);
+        btnNewSimulation.setOnClickListener(new OnClickListener(){
+			public void onClick(View v){
+				
+				Intent intent = new Intent(MainActivity.this, InitialConditions.class);
+				MainActivity.this.startActivity(intent);
+				MainActivity.this.finish();
+			}
+		});
+
+        Button loadPreviousButton = (Button) findViewById(R.id.btnLoadPreviousSim);
+    	//this on click listener prompts the user to delete or load a previous
+        loadPreviousButton.setOnClickListener(new View.OnClickListener() {	
+    		
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -52,25 +61,7 @@ public class MainActivity extends Activity {
 			    dialog.show();
 			}
 		});
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   
     }
 
 

@@ -11,21 +11,20 @@
     <string name="yes">Yes</string>
     <string name="cancel">Cancel</string>
     <string name="title_activity_simulation">Simulation</string>
+    <string name="title_intitial_conditions">Initial Conditions</string>
     <string name="hello_world">Hello world!</string>
     <string name="environment">Environment:</string>
     <string name="growth_rate">Growth Rate:</string>
-    <string name="humans">Humans:</string>
-    <string name="pterodactyl">pterodactyl</string>
-    <string name="t_rex">T-Rex</string>
-    <string name="amount_of_animals">Amount of Animals:</string>
-    
+    <string name="humans">Human:</string>
+    <string name="pterodactyl">Pterodactyl:</string>
+    <string name="t_rex">T-Rex:</string>
+    <string name="amount_of_animals">Animals:</string>
 
     <string-array name="environments_array">
         <item>Grasslands</item>
         <item>Wetland</item>
         <item>Forest</item>
     </string-array>
-
     <string-array name="growth_levels">
         <item>slow</item>
         <item>medium</item>
@@ -34,7 +33,4 @@
 
     <string name="title_activity_splash_screen">SplashScreen</string>
 
-
-    
-	
 </resources>

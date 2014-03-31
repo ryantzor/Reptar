@@ -9,6 +9,9 @@ public class TRex extends Organism
 			//Magic numbers
 			this.terrainAdaptability = 20.00;
 			this.threatLevel = 90.00;
+			this.typeOfFood = "Carnivore";
+			
 	}
+	
 
 }

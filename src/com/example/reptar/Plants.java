@@ -7,6 +7,7 @@ public class Plants extends Organism{
 		//Magic numbers
 		this.threatLevel = 0;
 		this.terrainAdaptability = 20;
-
+		this.typeOfFood = "Water";
+		
 	}
 }

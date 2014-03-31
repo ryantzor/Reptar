@@ -16,14 +16,13 @@
         <activity
             android:name="com.example.reptar.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
 
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.reptar.Simulation"
             android:label="@string/title_activity_simulation" >
         </activity>
+
         <activity
             android:name="com.example.reptar.SplashScreen"
             android:label="@string/title_activity_splash_screen" >
@@ -33,6 +32,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.reptar.InitialConditions"
+            android:label="@string/title_intitial_conditions">
+        </activity>
+ 
     </application>
 
 </manifest>

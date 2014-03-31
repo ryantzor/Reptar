@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.Window;
-import android.view.WindowManager;
+
 
 public class SplashScreen extends Activity {
-	private static int SPLASH_TIME_OUT = 5000;
 	private MediaPlayer zeldaTitleSong;
 	
 	@Override
@@ -27,11 +25,12 @@ public class SplashScreen extends Activity {
 			public void run(){
 				try{
 					sleep(5000);
+				
 				}
 				catch(InterruptedException e){
 					e.printStackTrace();
 				}
-				finally{
+				finally {
 					Intent intent = new Intent(SplashScreen.this,MainActivity.class);
 					SplashScreen.this.startActivity(intent);
 					SplashScreen.this.finish();
