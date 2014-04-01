@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Date;
 
-public class System {
+public class System extends Thread {
 	int stopTime;// = 2620800;
 	boolean stopNow = false;
 	private Date RealTime;
@@ -43,7 +43,7 @@ public class System {
 	 * set simTime to time of new event
 	 * Runs the event.
 	 */
-	void start() {
+	public void run() {
 		Event currentEvent;// = new Event();
 		while (Continue()){
 			currentEvent = queue.poll();

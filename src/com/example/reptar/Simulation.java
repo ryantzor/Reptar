@@ -5,13 +5,19 @@ import android.app.Activity;
 import android.view.Menu;
 
 public class Simulation extends Activity {
-
+	System sim;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_simulation);
 		SimulatorStart simulatorInstance = new SimulatorStart();
 		simulatorInstance.run();
+		
+		
+		sim = new System();
+		sim.start();
+		
 	}
 	  public class SimulatorStart extends Thread 
 	{
