@@ -6,87 +6,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".InitialConditions" >
-
-    <TextView
-        android:id="@+id/tvEnvironmentLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/environment" />
-
-    <Spinner
-        android:id="@+id/spinnerEvironmentTypes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/tvEnvironmentLabel" />
-
-    <Spinner
-        android:id="@+id/spinnerGrowthLevels"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinnerEvironmentTypes"
-        android:layout_below="@+id/spinnerEvironmentTypes" />
+    tools:context=".InitialConditions" 
+	android:background="@drawable/initial_conditions_background" >
 
     <TextView
         android:id="@+id/tvGrowthLevelLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/tvEnvironmentLabel"
         android:layout_alignTop="@+id/spinnerGrowthLevels"
         android:layout_marginTop="16dp"
-        android:text="@string/growth_rate" />
-
-    <EditText
-        android:id="@+id/etTrexCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tvTrexLabel"
-        android:layout_alignLeft="@+id/etHumanCount"
-        android:layout_alignRight="@+id/etHumanCount"
-        android:ems="10"
-        android:inputType="number" />
-
-    <TextView
-        android:id="@+id/tvPterodactylLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvEnvironmentLabel"
-        android:layout_below="@+id/tvAmountOfAnimalHeader"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/pterodactyl" />
-
-    <EditText
-        android:id="@+id/etPterodactylCount"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvAmountOfAnimalHeader"
-        android:layout_toRightOf="@+id/tvPterodactylLabel"
-        android:ems="10"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/etHumanCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etPterodactylCount"
-        android:layout_alignRight="@+id/etPterodactylCount"
-        android:layout_below="@+id/etPterodactylCount"
-        android:ems="10"
-        android:inputType="number" />
-
-    <TextView
-        android:id="@+id/tvTrexLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/tvHumanLabel"
-        android:layout_below="@+id/etHumanCount"
-        android:layout_marginTop="18dp"
-        android:text="@string/t_rex" />
+        android:text="Game Speed"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/tvHumanLabel"
@@ -94,7 +24,17 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/etTrexCount"
         android:layout_alignLeft="@+id/tvGrowthLevelLabel"
-        android:text="@string/humans" />
+        android:text="Humans"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvPterodactylLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etPterodactylCount"
+        android:layout_alignLeft="@+id/tvHumanLabel"
+        android:text="Pterodactyl"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/tvAmountOfAnimalHeader"
@@ -102,8 +42,88 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerGrowthLevels"
         android:layout_centerHorizontal="true"
+        android:text="Amount_of_animals"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvTrexLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHumanLabel"
+        android:layout_below="@+id/etHumanCount"
         android:layout_marginTop="15dp"
-        android:text="@string/amount_of_animals"
-        android:textSize="@dimen/activity_horizontal_margin" />
+        android:text="T_rex"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp"
+        android:minWidth="84dip"
+        android:text="Submit"
+        android:textSize="8dp" />
+
+    <EditText
+        android:id="@+id/etStegosaurusCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvStegasaurs"
+        android:layout_alignLeft="@+id/btnSubmit"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etTrexCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etStegosaurusCount"
+        android:layout_below="@+id/etHumanCount"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etHumanCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etTrexCount"
+        android:layout_below="@+id/etPterodactylCount"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etPterodactylCount"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etHumanCount"
+        android:layout_alignRight="@+id/etHumanCount"
+        android:layout_below="@+id/tvAmountOfAnimalHeader"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/spinnerGrowthLevels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvStegasaurs"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvStegasaurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvGrowthLevelLabel"
+        android:layout_below="@+id/etTrexCount"
+        android:layout_marginTop="26dp"
+        android:text="Stegosaurus:"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
 
 </RelativeLayout>

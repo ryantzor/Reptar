@@ -1,5 +1,9 @@
 package com.example.reptar;
 
+/*	Humans Class
+ * 
+ */
+
 public class Humans extends Organism {
 	
 	public Humans()
@@ -7,7 +11,7 @@ public class Humans extends Organism {
 		super();
 		
 		//Magic Numbers
-		this.terrainAdaptability = 100.0;
+		this.terrainAdaptability = 90.0;
 		this.threatLevel = 75.0;
 		
 		

@@ -1,18 +1,176 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="-15dp"
+    android:background="@drawable/plain1"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Simulation" >
 
     <TextView
+        android:id="@+id/hCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="84dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/hPC"
+        android:text="hCount"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/hPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/hCount"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="30dp"
+        android:text="hPC"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hPC"
+        android:layout_alignBottom="@+id/hPC"
+        android:layout_alignLeft="@+id/tCount"
+        android:text="tPC"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/pCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tCount"
+        android:layout_alignBottom="@+id/tCount"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="22dp"
+        android:text="pCount"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/pPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tPC"
+        android:layout_alignBottom="@+id/tPC"
+        android:layout_alignRight="@+id/pCount"
+        android:layout_marginRight="16dp"
+        android:text="pPC"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hCount"
+        android:layout_alignBottom="@+id/hCount"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="THIS WILL BE OUR SIMLUATION APP OR THE GAME SCREEN" />
+        android:text="hCount"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/sPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hCount"
+        android:layout_below="@+id/sCount"
+        android:text="sPC"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/sCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tPC"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/sPC"
+        android:text="sCount"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/plantCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sCount"
+        android:layout_alignBottom="@+id/sCount"
+        android:layout_toRightOf="@+id/tPC"
+        android:text="plantCount"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/plantPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/plantCount"
+        android:layout_below="@+id/plantCount"
+        android:text="plantPC"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/Flood"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/plantCount"
+        android:minWidth="100dp"
+        android:text="Flood" />
+
+    <Button
+        android:id="@+id/Meteor"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Flood"
+        android:layout_below="@+id/Flood"
+        android:layout_marginTop="20dp"
+        android:minWidth="100dip"
+        android:text="Meteor" />
+
+    <Button
+        android:id="@+id/Ending"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Meteor"
+        android:layout_below="@+id/Meteor"
+        android:layout_marginTop="26dp"
+        android:minWidth="100dip"
+        android:text="End" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Flood"
+        android:layout_alignBottom="@+id/Flood"
+        android:layout_toLeftOf="@+id/sPC"
+        android:text="Weeks:" />
+
+    <TextView
+        android:id="@+id/weeksT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="0" />
 
 </RelativeLayout>

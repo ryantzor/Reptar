@@ -1,65 +1,26 @@
 package com.example.reptar;
 
-import java.util.Date;
-	
-
+/**
+ * This is the Event class. Every event will be associated
+ * with an instance of it.
+ */
 public class Event {
-	public SimulationDate simDate;
+	//public SimulationDate simDate;
+	int duration; // Length of the event.
+	String event; // Name of the event.
+	int priority; // The events priority.
 	
-	Event() {
-		simDate = new SimulationDate();
-	}
-	
-	Event(int happenTime) {
-		simDate = new SimulationDate(happenTime);
-	}
-	
-	public void Happen(System x) {
-		
-	}
-	
-	public SimulationDate getDate() {
-		return simDate;
-	}
-	
-	public void setDate(SimulationDate x) {
-		simDate = x;
-	}
-}
-
-class displayEvent extends Event {
-	
-
-	
-	displayEvent() {
-		simDate = new SimulationDate();
-	}
-	
-	
-	displayEvent(int happenTime) {
-		simDate = new SimulationDate(happenTime);
+	/*
+	 * The constructor for class Event.
+	 * @param durations The duration that the event should last.
+	 * @param events The name of the event.
+	 * @param prioritiys The priority of the event.
+	 */
+	Event(int durations, String events, int prioritys) {
+		duration = durations;
+		event = events;
+		priority = prioritys;
 	}
 	
 
-	public void Happen(System x) {
-		//wait
-		Date Time = x.getRealTime();
-		Date now = new Date();
-		Time.setTime(Time.getTime() - now.getTime());
-		// has the program wait (5 sec) - time 
-		if (Time.getTime() < 5000) {
-			try {
-				Thread.sleep(5000 - Time.getTime());
-			} catch (Exception e) {
-				//todo message box
-			}
-		}
-		
-		//display function
-		
-		//update real time and add new displayEvent
-		x.setRealTime();
-		int eventTime = simDate.getTime() + x.GetSpeed();//sets eventTime to this events time + simulation speed
-		x.addEvent(new displayEvent(eventTime));
-	}
 }

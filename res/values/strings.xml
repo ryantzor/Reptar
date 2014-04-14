@@ -12,29 +12,28 @@
     <string name="cancel">Cancel</string>
     <string name="title_activity_simulation">Simulation</string>
     <string name="hello_world">Hello world!</string>
-    <string name="environment">Environment:</string>
-    <string name="growth_rate">Growth Rate:</string>
-    <string name="humans">Humans:</string>
-    <string name="pterodactyl">pterodactyl</string>
-    <string name="t_rex">T-Rex</string>
-    <string name="amount_of_animals">Amount of Animals:</string>
-    
+    <string name="title_intitial_conditions">Initial Conditions</string>
+    <string name ="HighScores">High Scores</string>
+    <string name ="hs_back">Back</string>
+    <string name ="hs_header">Name Score</string>
+    <string name ="hs_empty">Empty</string>
+    <string name ="high_scores_file">com.example.reptar.HighScoresFile</string>
+    <string name ="hs_yourscore">Your Score</string>
+    <string name ="enter_name">Enter Name</string>
+    <string name ="hs_done">Done</string>
+    <string name ="hs_reset">Reset Scores</string>
 
     <string-array name="environments_array">
         <item>Grasslands</item>
         <item>Wetland</item>
         <item>Forest</item>
     </string-array>
-
     <string-array name="growth_levels">
         <item>slow</item>
         <item>medium</item>
         <item>fast</item>
     </string-array>
 
-    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_high_score">HighScoreActivity</string>
 
-
-    
-	
 </resources>
