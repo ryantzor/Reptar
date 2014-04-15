@@ -48,6 +48,7 @@ public class HighScore extends Activity {
 				Intent intent = new Intent(HighScore.this,
 						MainActivity.class);
 				startActivity(intent);
+				HighScore.this.finish();
 			}
 		});
         
