@@ -173,4 +173,28 @@
         android:layout_toRightOf="@+id/textView1"
         android:text="0" />
 
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weeksT"
+        android:layout_alignBottom="@+id/weeksT"
+        android:layout_toRightOf="@+id/sPC"
+        android:text="Score:" />
+
+    <TextView
+        android:id="@+id/scoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/score"
+        android:layout_alignBottom="@+id/score"
+        android:layout_toRightOf="@+id/score"
+        android:text="0" />
+
+"
+
+"
+
+    
+
 </RelativeLayout>
