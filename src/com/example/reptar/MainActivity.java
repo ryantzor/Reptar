@@ -27,14 +27,6 @@ public class MainActivity extends Activity {
 	String data = "";
 	
 	int[] dataArray = new int[6];
-	/*
-	int humansCount =0;
-	int trexCount = 0;
-	int pterodactylCount = 0;
-	int stegosaurusCount = 0;
-	int gameSpeed = 1;
-	int weeks = 0;
-	*/
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,33 +35,28 @@ public class MainActivity extends Activity {
         
 		Button loadPreviousButton = (Button) findViewById(R.id.btnLoadPreviousSim);
 		Button btnNewSimulation = (Button) findViewById(R.id.btnNewSimulation);
-		 btnNewSimulation.setOnClickListener(new OnClickListener(){
-				public void onClick(View v){
-
-					Intent intent = new Intent(MainActivity.this, InitialConditions.class);
-					MainActivity.this.startActivity(intent);
-					MainActivity.this.finish();
-				}
-			});
+		btnNewSimulation.setOnClickListener(new OnClickListener(){
+			public void onClick(View v){
+				Intent intent = new Intent(MainActivity.this, InitialConditions.class);
+				MainActivity.this.startActivity(intent);
+				MainActivity.this.finish();
+			}
+		});
 		 
-		 Button btnHighScore = (Button) findViewById(R.id.btnHighScore);
+		Button btnHighScore = (Button) findViewById(R.id.btnHighScore);
 	        btnHighScore.setOnClickListener(new OnClickListener(){
-				public void onClick(View v){
-					
-					Intent intent = new Intent(MainActivity.this, HighScore.class);
-					intent.putExtra("NEW_SCORE", -1); // -1 Here indicates that there is no new score. So it will just display the saved scores.
-					MainActivity.this.startActivity(intent);
-					MainActivity.this.finish();
-				}
-			});
+			public void onClick(View v){
+				Intent intent = new Intent(MainActivity.this, HighScore.class);
+				// The -1 below indicates that there is no new score. So it will just display the saved scores.
+				intent.putExtra("NEW_SCORE", -1);
+				MainActivity.this.startActivity(intent);
+				MainActivity.this.finish();
+			}
+		});
 		
 		loadPreviousButton.setOnClickListener(new View.OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
-		       
 				AlertDialog.Builder builder = new AlertDialog.Builder(
 						MainActivity.this);
 				builder.setMessage(R.string.are_you_sure);
@@ -105,43 +92,43 @@ public class MainActivity extends Activity {
 	}
 	
 	//runs getDate
-    public void init()
-    {
-    	getData();
+    	public void init()
+    	{
+    		getData();
     	
-    }
-    /*Parse the Strings from the saved data
-     *return 1 if successful,
-     *returns -1 if not
-     *
-     * Saved Data Format
-     * 0/1   <--indicate data saved
-     * n <--Human Count
-     * n <--T-Rex Count
-     * n <-- Pterodactyl Count
-     * n <-- Stegosaurus Count
-     * 1/2/3 Game Speed
-     * n <-- n weeks
-     */
+    	}
+    	/*Parse the Strings from the saved data
+     	*return 1 if successful,
+	*returns -1 if not
+     	*
+     	* Saved Data Format
+     	* 0/1   <--indicate data saved
+     	* n <--Human Count
+     	* n <--T-Rex Count
+     	* n <-- Pterodactyl Count
+     	* n <-- Stegosaurus Count
+     	* 1/2/3 Game Speed
+     	* n <-- n weeks
+     	*/
     
-    public int parse()
-    {
-    	String[] lines = data.split(System.getProperty("line.separator"));
+    	public int parse()
+    	{
+    		String[] lines = data.split(System.getProperty("line.separator"));
     	
-    	//A '1' at the first line on the first char indicate that it has a saved data
-    	if(lines[0].charAt(0) == 0|| data == null || data.equals(""))
+    		//A '1' at the first line on the first char indicate that it has a saved data
+    		if(lines[0].charAt(0) == 0|| data == null || data.equals(""))
 		{
-    		return -1; // should return an error or -1 to indicate so
+    			return -1; // should return an error or -1 to indicate so
 		}
         
-    	for(int i = 0;i<lines.length;i++)
-    	{
-    		dataArray[i] =	Integer.parseInt(lines[i]);
-    	}
+    		for(int i = 0;i<lines.length;i++)
+    		{
+    			dataArray[i] =	Integer.parseInt(lines[i]);
+    		}
     
-    	return 1;    	
+    		return 1;    
+    	}
     	
-    }
 	/*
 	 * This method will first try to open the file highscore If this fails, it
 	 * will create a new file name highscore If this doesn't fail, it will find
@@ -149,7 +136,6 @@ public class MainActivity extends Activity {
 	 */
 
 	// *Read the saved Data into a string
-
 	public void getData() {
 		Context context = getApplicationContext();
 		int ch;
