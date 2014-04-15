@@ -51,7 +51,7 @@ public class InitialConditions extends Activity {
 				
 				//intent.putExtras(B);
 				startActivity(intent);
-
+				InitialConditions.this.finish();
 
 
 			}
