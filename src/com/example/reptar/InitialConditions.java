@@ -35,12 +35,13 @@ public class InitialConditions extends Activity {
 				Intent intent = new Intent(InitialConditions.this, Simulation.class);
 				try
 				{
-				@SuppressWarnings("unused")
-				int hdc = Integer.parseInt(etHuman.getText().toString());
-				intent.putExtra("human", Integer.parseInt(etHuman.getText().toString()));
-				intent.putExtra("pterodactyl",Integer.parseInt(etPterodactyl.getText().toString()));
-				intent.putExtra("stegosaurus", Integer.parseInt(etStegosaurus.getText().toString()));
-				intent.putExtra("trex", Integer.parseInt(etTrex.getText().toString()));
+					if(etHuman.getText().length() < 1 || etPterodactyl.getText().length() < 1 || etStegosaurus.getText().length() < 1 || etTrex.getText().length() < 1) return;
+					@SuppressWarnings("unused")
+					int hdc = Integer.parseInt(etHuman.getText().toString());
+					intent.putExtra("human", Integer.parseInt(etHuman.getText().toString()));
+					intent.putExtra("pterodactyl",Integer.parseInt(etPterodactyl.getText().toString()));
+					intent.putExtra("stegosaurus", Integer.parseInt(etStegosaurus.getText().toString()));
+					intent.putExtra("trex", Integer.parseInt(etTrex.getText().toString()));
 				}catch(Exception e)
 				{
 					System.out.println(e);
