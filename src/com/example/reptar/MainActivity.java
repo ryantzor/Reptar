@@ -21,18 +21,18 @@ import android.widget.Button;
  * 
  */
 public class MainActivity extends Activity {
-	
+
 	Boolean dataReady = false;
 	String filename = "dinoData";
 	String data = "";
-	
+
 	int[] dataArray = new int[6];
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-        
+
 		Button loadPreviousButton = (Button) findViewById(R.id.btnLoadPreviousSim);
 		Button btnNewSimulation = (Button) findViewById(R.id.btnNewSimulation);
 		btnNewSimulation.setOnClickListener(new OnClickListener(){
@@ -42,9 +42,9 @@ public class MainActivity extends Activity {
 				MainActivity.this.finish();
 			}
 		});
-		 
+
 		Button btnHighScore = (Button) findViewById(R.id.btnHighScore);
-	        btnHighScore.setOnClickListener(new OnClickListener(){
+		btnHighScore.setOnClickListener(new OnClickListener(){
 			public void onClick(View v){
 				Intent intent = new Intent(MainActivity.this, HighScore.class);
 				// The -1 below indicates that there is no new score. So it will just display the saved scores.
@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
 				MainActivity.this.finish();
 			}
 		});
-		
+
 		loadPreviousButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -64,71 +64,71 @@ public class MainActivity extends Activity {
 				builder.setPositiveButton(R.string.yes,
 						new DialogInterface.OnClickListener() {
 
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) 
-							{
-								// start the simulation activity
-								Intent intent = new Intent(MainActivity.this,
-										Simulation.class);
-								startActivity(intent);
-							}
-						});
+					@Override
+					public void onClick(DialogInterface dialog,
+							int which) 
+					{
+						// start the simulation activity
+						Intent intent = new Intent(MainActivity.this,
+								Simulation.class);
+						startActivity(intent);
+					}
+				});
 
 				builder.setNegativeButton(R.string.cancel,
-				new DialogInterface.OnClickListener() {
+						new DialogInterface.OnClickListener() {
 
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
-								// do nothing
-							}
-						});
+					@Override
+					public void onClick(DialogInterface dialog,
+							int which) {
+						// do nothing
+					}
+				});
 
 				AlertDialog dialog = builder.create();
 				dialog.show();
 			}
 		});
 	}
-	
+
 	//runs getDate
-    	public void init()
-    	{
-    		getData();
-    	
-    	}
-    	/*Parse the Strings from the saved data
-     	*return 1 if successful,
-	*returns -1 if not
-     	*
-     	* Saved Data Format
-     	* 0/1   <--indicate data saved
-     	* n <--Human Count
-     	* n <--T-Rex Count
-     	* n <-- Pterodactyl Count
-     	* n <-- Stegosaurus Count
-     	* 1/2/3 Game Speed
-     	* n <-- n weeks
-     	*/
-    
-    	public int parse()
-    	{
-    		String[] lines = data.split(System.getProperty("line.separator"));
-    	
-    		//A '1' at the first line on the first char indicate that it has a saved data
-    		if(lines[0].charAt(0) == 0|| data == null || data.equals(""))
+	public void init()
+	{
+		getData();
+
+	}
+	/*Parse the Strings from the saved data
+	 *return 1 if successful,
+	 *returns -1 if not
+	 *
+	 * Saved Data Format
+	 * 0/1   <--indicate data saved
+	 * n <--Human Count
+	 * n <--T-Rex Count
+	 * n <-- Pterodactyl Count
+	 * n <-- Stegosaurus Count
+	 * 1/2/3 Game Speed
+	 * n <-- n weeks
+	 */
+
+	public int parse()
+	{
+		String[] lines = data.split(System.getProperty("line.separator"));
+
+		//A '1' at the first line on the first char indicate that it has a saved data
+		if(lines[0].charAt(0) == 0|| data == null || data.equals(""))
 		{
-    			return -1; // should return an error or -1 to indicate so
+			return -1; // should return an error or -1 to indicate so
 		}
-        
-    		for(int i = 0;i<lines.length;i++)
-    		{
-    			dataArray[i] =	Integer.parseInt(lines[i]);
-    		}
-    
-    		return 1;    
-    	}
-    	
+
+		for(int i = 0;i<lines.length;i++)
+		{
+			dataArray[i] =	Integer.parseInt(lines[i]);
+		}
+
+		return 1;    
+	}
+
 	/*
 	 * This method will first try to open the file highscore If this fails, it
 	 * will create a new file name highscore If this doesn't fail, it will find
@@ -164,12 +164,12 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}    			    
-    			  	
-}
-    
 
-    
-    
+}
+
+
+
+
 
 
 
