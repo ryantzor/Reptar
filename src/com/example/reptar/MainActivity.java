@@ -59,6 +59,7 @@ public class MainActivity extends Activity {
 					Intent intent = new Intent(MainActivity.this, HighScore.class);
 					intent.putExtra("NEW_SCORE", -1); // -1 Here indicates that there is no new score. So it will just display the saved scores.
 					MainActivity.this.startActivity(intent);
+					MainActivity.this.finish();
 				}
 			});
 		
