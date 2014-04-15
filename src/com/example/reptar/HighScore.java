@@ -43,7 +43,7 @@ public class HighScore extends Activity {
 		
 		// Set up the back button to send the user back to the main activity.
 		final Button btnBack = (Button) findViewById(R.id.btnBack);
-        btnBack.setOnClickListener(new OnClickListener(){
+        	btnBack.setOnClickListener(new OnClickListener(){
 			public void onClick(View v){
 				Intent intent = new Intent(HighScore.this,
 						MainActivity.class);
@@ -52,19 +52,19 @@ public class HighScore extends Activity {
 			}
 		});
         
-       // Set up the reset button to reset all of the highscore entries.
-       final Button btnReset = (Button) findViewById(R.id.btnReset);
-        btnReset.setOnClickListener(new OnClickListener(){
+       		// Set up the reset button to reset all of the highscore entries.
+       		final Button btnReset = (Button) findViewById(R.id.btnReset);
+        	btnReset.setOnClickListener(new OnClickListener(){
 			public void onClick(View v){
 				ResetScores();
 				DisplayScores();
 			}
 		});
         
-        // Set up the done button. This is the button a user presses when 
-        // they are done entering their names if they got a highscore.
-        final Button btnDone = (Button) findViewById(R.id.btnDone);
-        btnDone.setOnClickListener(new OnClickListener(){
+        	// Set up the done button. This is the button a user presses when 
+        	// they are done entering their names if they got a highscore.
+        	final Button btnDone = (Button) findViewById(R.id.btnDone);
+        	btnDone.setOnClickListener(new OnClickListener(){
 			public void onClick(View v){
 				EditText enterName = (EditText) findViewById(R.id.etEnterName);
 				_NewName = enterName.getText().toString();
@@ -75,11 +75,11 @@ public class HighScore extends Activity {
 			}
 		});
         
-        // Display the current highscores to the screen.
-        DisplayScores();
+        	// Display the current highscores to the screen.
+        	DisplayScores();
         
-        // Retrieve the shared preferences file.
-        Context context = this;
+        	// Retrieve the shared preferences file.
+        	Context context = this;
 		SharedPreferences sharedPref = context.getSharedPreferences(getString(R.string.high_scores_file), Context.MODE_PRIVATE);
 		int defaultValue = 0;
 		
@@ -98,7 +98,7 @@ public class HighScore extends Activity {
 		
 		// If the new score is higher than any old score, replace the old
 		// score with it.
-        if(score3 < _NewScore) 
+        	if(score3 < _NewScore) 
 		{
 			EditText enterName = (EditText) findViewById(R.id.etEnterName);
 			enterName.setVisibility(View.VISIBLE);
